@@ -1,1 +1,41 @@
-
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172554">
+<title>Repaso diario · Oposiciones</title>
+<style>
+:root{color-scheme:light;--ink:#172033;--muted:#667085;--line:#e4e7ec;--paper:#f5f7fb;--blue:#2448a8;--blue2:#e9efff;--green:#147d55}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{width:min(900px,calc(100% - 32px));margin:0 auto;padding:36px 0 56px}
+.hero{background:linear-gradient(135deg,#172554,#284bb3);color:white;border-radius:24px;padding:30px;box-shadow:0 12px 30px #17255420}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:750;opacity:.8}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.12;margin:10px 0}.hero p{margin:8px 0 0;max-width:600px;color:#e0e7ff}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.stat{background:#ffffff18;border:1px solid #ffffff2c;border-radius:14px;padding:12px 14px}.stat strong{display:block;font-size:1.45rem}.stat span{font-size:.82rem;color:#e0e7ff}.progress-track{height:8px;background:#ffffff35;border-radius:20px;overflow:hidden;margin-top:16px}.progress-fill{height:100%;width:0;background:#86efac;border-radius:20px;transition:width .2s}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 2px 14px}h2{font-size:1.2rem;margin:0}.sub{color:var(--muted);font-size:.9rem;margin:3px 0 0}.cards{display:grid;gap:12px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:15px;box-shadow:0 3px 10px #10182808}.card.done{border-color:#a7dfc4;background:#fbfffd}.check{width:27px;height:27px;accent-color:var(--green);cursor:pointer}.num{width:42px;height:42px;border-radius:13px;background:var(--blue2);color:var(--blue);display:grid;place-items:center;font-weight:800;margin-bottom:7px}.card.done .num{background:#dcfce7;color:var(--green)}.title{font-weight:750;font-size:1.02rem;margin:0 0 3px}.desc{font-size:.88rem;color:var(--muted);overflow-wrap:anywhere}.actions{display:flex;flex-direction:column;gap:8px;align-items:stretch}a.btn,button.btn{font:inherit;font-size:.88rem;font-weight:700;text-decoration:none;border-radius:10px;padding:10px 13px;white-space:nowrap;cursor:pointer;text-align:center}.btn-primary{background:var(--blue);color:white;border:1px solid var(--blue)}.btn-secondary{background:white;color:var(--ink);border:1px solid var(--line)}.toolbar{display:flex;flex-wrap:wrap;gap:9px}.note{margin-top:20px;padding:15px 17px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--muted);font-size:.9rem}footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:25px}
+@media(max-width:620px){.wrap{padding-top:18px}.hero{padding:23px}.card{grid-template-columns:auto 1fr;gap:12px;padding:15px}.check{grid-column:1;grid-row:1}.card-main{grid-column:2}.actions{grid-column:2;flex-direction:row;flex-wrap:wrap}.actions .btn{flex:1}.num{display:none}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero"><div class="eyebrow">Rutina de estudio</div><h1>Repaso diario de oposiciones</h1><p>Abre cada juego, practica la recuperación activa y marca la tarea cuando termines. La lista se guarda en este navegador.</p><div class="stats"><div class="stat"><strong id="count">0 de 5</strong><span>juegos completados hoy</span></div><div class="stat"><strong id="percent">0%</strong><span>progreso del repaso</span></div></div><div class="progress-track" aria-label="Progreso del día"><div class="progress-fill" id="bar"></div></div></header>
+<div class="section-head"><div><h2>Tu lista de repaso</h2><p class="sub" id="today"></p></div><div class="toolbar"><button class="btn btn-secondary" id="openAll" type="button">Abrir todos ↗</button><button class="btn btn-secondary" id="reset" type="button">Reiniciar día</button></div></div>
+<section class="cards" id="games" aria-label="Juegos de repaso">
+<article class="card" data-id="art29"><input class="check" type="checkbox" aria-label="Marcar artículo 29 como completado"><div class="card-main"><div class="num">01</div><p class="title">Artículo 29 · Proporcionalidad</p><div class="desc">Principio de proporcionalidad · Ley 40/2015</div></div><div class="actions"><a class="btn btn-primary" href="https://jaimepascual.github.io/art29Proporcionalidad/" target="_blank" rel="noopener">Practicar ↗</a></div></article>
+<article class="card" data-id="competencias"><input class="check" type="checkbox" aria-label="Marcar competencias como completado"><div class="card-main"><div class="num">02</div><p class="title">Competencias</p><div class="desc">Repaso de competencias</div></div><div class="actions"><a class="btn btn-primary" href="https://jaimepascual.github.io/competencias/" target="_blank" rel="noopener">Practicar ↗</a></div></article>
+<article class="card" data-id="competencias-todas"><input class="check" type="checkbox" aria-label="Marcar todas las competencias como completado"><div class="card-main"><div class="num">03</div><p class="title">Competencias · Todas</p><div class="desc">Versión completa de competencias</div></div><div class="actions"><a class="btn btn-primary" href="https://jaimepascual.github.io/competencias-todas/" target="_blank" rel="noopener">Practicar ↗</a></div></article>
+<article class="card" data-id="solvencia"><input class="check" type="checkbox" aria-label="Marcar solvencia en contratos como completado"><div class="card-main"><div class="num">04</div><p class="title">Solvencia en contratos</p><div class="desc">Requisitos de solvencia en contratación pública</div></div><div class="actions"><a class="btn btn-primary" href="https://jaimepascual.github.io/solvencia-contratos/" target="_blank" rel="noopener">Practicar ↗</a></div></article>
+<article class="card" data-id="presupuesto"><input class="check" type="checkbox" aria-label="Marcar presupuesto como completado"><div class="card-main"><div class="num">05</div><p class="title">Presupuesto</p><div class="desc">Repaso de presupuesto</div></div><div class="actions"><a class="btn btn-primary" href="https://jaimepascual.github.io/presupuesto/" target="_blank" rel="noopener">Practicar ↗</a></div></article>
+</section><aside class="note"><strong>Consejo:</strong> intenta responder antes de revelar la solución. Si fallas una pregunta, repite ese juego al final de la sesión.</aside><footer>El progreso se guarda únicamente en este navegador y dispositivo. Si necesitas añadir nuevos juegos pasa este index junto con sus direcciones web a una IA y que los añada.</footer>
+</main>
+<script>
+(() => {
+ const cards=[...document.querySelectorAll('.card')];
+ const todayKey=new Date().toLocaleDateString('sv-SE');
+ const storageKey='oposiciones-repaso-'+todayKey;
+ document.getElementById('today').textContent=new Date().toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+ let state={};try{state=JSON.parse(localStorage.getItem(storageKey)||'{}')||{}}catch(_){ }
+ function render(){let done=0;cards.forEach(card=>{const id=card.dataset.id,checked=Boolean(state[id]);card.querySelector('input').checked=checked;card.classList.toggle('done',checked);if(checked)done++});document.getElementById('count').textContent=`${done} de ${cards.length}`;const pct=Math.round(done/cards.length*100);document.getElementById('percent').textContent=pct+'%';document.getElementById('bar').style.width=pct+'%';try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(_){}}
+ cards.forEach(card=>card.querySelector('input').addEventListener('change',e=>{state[card.dataset.id]=e.target.checked;render()}));
+ document.getElementById('reset').addEventListener('click',()=>{if(confirm('¿Quieres desmarcar los cinco juegos de hoy?')){state={};render()}});
+ document.getElementById('openAll').addEventListener('click',()=>{cards.forEach(card=>window.open(card.querySelector('a').href,'_blank','noopener'))});render();
+})();
+</script>
+</body></html>
